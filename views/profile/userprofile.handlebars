@@ -1,0 +1,24 @@
+{{#each profile}}
+<div class="container">
+     <div class="row">
+         <div class="col-md-3">
+                     
+             <img src="{{trimString photo.0.path}}" alt="profilepic" 
+             class="img-responsive img-fluid">
+         </div>
+         <div class="col-md-9">
+             <h1 class="h1 bg-dark text-light mt-2 p-1">Profile</h1>
+             <ul class="list-group">
+                 <li class="list-group mt-2"> <span>Name:</span>{{name}}</li>
+                 <li class="list-group mt-2"> <span>Phone:</span>{{phonenumber}}</li>
+                 <li class="list-group mt-2"> <span>Company:</span>{{comapny}}</li>
+                 <li class="list-group mt-2"><span>Loaction</span>{{location}}</li>
+                 <li class="list-group mt-2"> <span>Education</span>{{education}}</li>
+                 <p class="text-light float-left display-block bg-danger mt-2 p-2">{{date}}</p>
+             </ul>
+         </div>
+     </div>
+</div>
+{{else}}
+<h1 class="text-danger">no profile is here</h1>
+{{/each}}
